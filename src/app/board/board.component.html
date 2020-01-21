@@ -1,0 +1,9 @@
+<app-header></app-header>
+
+<app-create-area (add)="addNote($event)"></app-create-area>
+
+<div *ngFor="let item of list">
+    <app-note (delete)="deleteNote($event)" [note]="item"></app-note>
+</div>
+
+<app-footer></app-footer>
